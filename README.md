@@ -103,6 +103,9 @@ The container will automatically run the `start.sh` script that will further pro
 If you choose to save the predictions locally, the shell script will create a directory (`predictions`) & subdirectories (`class_0` and `class_1`) inside `workspace` and saves the output images that are published to the 5 topics (`/all_detections`, `/ground_detections`, `/pallet_detections`, `/ground_segmentmask`, `/pallet_segmentmask`)
 
 #### Results I obtained can be viewed here : [link for the detection results I got](https://drive.google.com/drive/folders/1fs4lLZgcdoZoiF7aGXPC6BKuSoB8UfwN?usp=sharing)
+### Visuals
+![assets\my_results-gif.gif](https://github.com/PannagaS/pallet-detection-task/blob/main/assets/my_results-gif.gif)
+
 ### Object detection and segmentation model performance metrics
 The following charts show the model's performance after training for 100 epochs on training dataset & was validated against the validation dataset. 
 
