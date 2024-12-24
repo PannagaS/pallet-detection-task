@@ -51,7 +51,7 @@ Note that you will be prompted for however you want would like to run the model 
 This project is wrapped in a docker for easy replication on other devices with NVIDIA drivers. 
 Please pull the docker image from [here](https://hub.docker.com/repository/docker/pans06/peer_robotics/general). 
 ```
-docker pull pans06/peer_robotics:jetson
+docker pull pans06/peer_robotics:jetson_v2
 ```
 
 Download the bag file and place it under `workspace` directory. 
@@ -94,7 +94,7 @@ Note that you can also choose to place the dataset folder `Pallet-Detection-1` i
 ---
 Create a new interactive container from the image you just pulled by running the following command: 
 ```
-docker run -it --rm --runtime=nvidia -v <path to workspace>:/home/ws --ipc=host peer_robotics:jetson
+docker run -it --rm --runtime=nvidia -v <path to workspace>:/home/ws --ipc=host peer_robotics:jetson_v2
 ```
 Note that this will open an interactive shell with ROS2 humble and Ultralytics installed for performing the above mentioned tasks. 
 
