@@ -41,8 +41,11 @@ full dataset includes 1245 images
 The process flow inside the docker is as shown in the figure below. 
 ![assets](https://github.com/PannagaS/pallet-detection-task/blob/main/assets/process_flow.png) 
 
-The entry point for the project is at start.sh shell script. The user is prompted with options for converting best.pt to best.engine (TensorRT model). Further, depending on whether the user wants to run the inference on test images or from the ros bag ([click here](https://drive.google.com/file/d/1BvhP653G3PqfUq96L18gDBIi-5oOYqcr/view) for bag file) or on live camera feed, other model parameters such as confidence, iou, half precision flag (FP16) can be set accordingly. 
+- The entry point for the project is at start.sh shell script.
+- The user is prompted with options for converting best.pt to best.engine (TensorRT model).
+- Further, depending on whether the user wants to run the inference on test images or from the ros bag ([click here](https://drive.google.com/file/d/1BvhP653G3PqfUq96L18gDBIi-5oOYqcr/view) for bag file) or on live camera feed, other model parameters such as confidence, iou, half precision flag (FP16) can be set accordingly. 
 
+Note that you will be prompted for however you want would like to run the model (by specifying model parameters and/or running inference on specific topics). I believe these prompts are self-explanatory. 
 
 ## Navigating the project
 This project is wrapped in a docker for easy replication on other devices with NVIDIA drivers. 
