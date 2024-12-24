@@ -39,7 +39,7 @@ full dataset includes 1245 images
 <!-- ![train-val-test split](assets\train-val-test-split.png) -->
 ## Process flow
 The process flow inside the docker is as shown in the figure below. 
-![process-flow](assets\process_flow.png)
+![assets](https://github.com/PannagaS/pallet-detection-task/blob/main/assets/process_flow.png) 
 
 The entry point for the project is at start.sh shell script. The user is prompted with options for converting best.pt to best.engine (TensorRT model). Further, depending on whether the user wants to run the inference on test images or from the ros bag ([click here](https://drive.google.com/file/d/1BvhP653G3PqfUq96L18gDBIi-5oOYqcr/view) for bag file) or on live camera feed, other model parameters such as confidence, iou, half precision flag (FP16) can be set accordingly. 
 
@@ -104,9 +104,9 @@ If you choose to save the predictions locally, the shell script will create a di
 The following charts show the model's performance after training for 100 epochs on training dataset & was validated against the validation dataset. 
 
 #### Results
-![training-results-graphs](assets\results.png)
-
+![assets\results.png](https://github.com/PannagaS/pallet-detection-task/blob/main/assets/results.png)
+ 
 #### Normalized Confusion Matrix
-![normalized-confusion-matrix](assets\confusion_matrix_normalized.png#center) 
+ ![assets\confusion_matrix_normalized.png#center](https://github.com/PannagaS/pallet-detection-task/blob/main/assets/confusion_matrix_normalized.png)
  
 
