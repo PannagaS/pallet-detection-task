@@ -14,7 +14,7 @@
 ### Task 3
 * Develop a ROS2 (humble) package with appropriate nodes. The nodes should do the following: 
     * Subscribe to image and depth topics from a simulated or real camera
-    * Perform object detection and segmentaation 
+    * Perform object detection and segmentation 
 
 ### Additional Tasks 
 * Optimize models for edge deployments - convert to TensorRT or ONNX format. 
