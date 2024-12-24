@@ -1,0 +1,91 @@
+[0.000000] (-) TimerEvent: {}
+[0.001422] (-) JobUnselected: {'identifier': 'test_pkg'}
+[0.002010] (pallet_detection) JobQueued: {'identifier': 'pallet_detection', 'dependencies': OrderedDict()}
+[0.002124] (pallet_detection) JobStarted: {'identifier': 'pallet_detection'}
+[0.099426] (-) TimerEvent: {}
+[0.200022] (-) TimerEvent: {}
+[0.300624] (-) TimerEvent: {}
+[0.401205] (-) TimerEvent: {}
+[0.501803] (-) TimerEvent: {}
+[0.602586] (-) TimerEvent: {}
+[0.703182] (-) TimerEvent: {}
+[0.803759] (-) TimerEvent: {}
+[0.904340] (-) TimerEvent: {}
+[1.004914] (-) TimerEvent: {}
+[1.105500] (-) TimerEvent: {}
+[1.206103] (-) TimerEvent: {}
+[1.306629] (-) TimerEvent: {}
+[1.407223] (-) TimerEvent: {}
+[1.507768] (-) TimerEvent: {}
+[1.608373] (-) TimerEvent: {}
+[1.620858] (pallet_detection) Command: {'cmd': ['/usr/bin/python3', '-W', 'ignore:setup.py install is deprecated', '-W', 'ignore:easy_install command is deprecated', 'setup.py', 'egg_info', '--egg-base', '../../build/pallet_detection', 'build', '--build-base', '/home/ws/build/pallet_detection/build', 'install', '--record', '/home/ws/build/pallet_detection/install.log', '--single-version-externally-managed', 'install_data'], 'cwd': '/home/ws/src/pallet_detection', 'env': {'HOSTNAME': '187fca18b7f1', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/aarch64-linux-gnu:/opt/ros/humble/lib:/usr/local/cuda/lib64:', 'HOME': '/root', 'OLDPWD': '/home/ws/predictions', 'PYTHONUNBUFFERED': '1', 'ROS_PYTHON_VERSION': '3', 'LC_CTYPE': 'C.UTF-8', 'COLCON_PREFIX_PATH': '/home/ws/install', 'ROS_DISTRO': 'humble', 'PYTHONDONTWRITEBYTECODE': '1', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'NVIDIA_DRIVER_CAPABILITIES': 'all', 'PIP_BREAK_SYSTEM_PACKAGES': '1', 'TERM': 'xterm', 'ROS_LOCALHOST_ONLY': '0', 'PATH': '/opt/ros/humble/bin:/usr/local/cuda/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin', 'PIP_NO_CACHE_DIR': '1', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:', 'AMENT_PREFIX_PATH': '/home/ws/install/test_pkg:/home/ws/install/pallet_detection:/opt/ros/humble', 'DEBIAN_FRONTEND': 'noninteractive', 'PWD': '/home/ws/build/pallet_detection', 'CUDA_HOME': '/usr/local/cuda', 'PYTHONPATH': '/home/ws/build/pallet_detection/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/ws/install/pallet_detection/lib/python3.10/site-packages:/home/ws/install/test_pkg/lib/python3.10/site-packages:/home/ws/install/pallet_detection/lib/python3.10/site-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages', 'NVIDIA_VISIBLE_DEVICES': 'all', 'COLCON': '1'}, 'shell': False}
+[1.708536] (-) TimerEvent: {}
+[1.809136] (-) TimerEvent: {}
+[1.909745] (-) TimerEvent: {}
+[2.010313] (-) TimerEvent: {}
+[2.110948] (pallet_detection) StdoutLine: {'line': b'running egg_info\n'}
+[2.111465] (-) TimerEvent: {}
+[2.140225] (pallet_detection) StdoutLine: {'line': b'writing ../../build/pallet_detection/pallet_detection.egg-info/PKG-INFO\n'}
+[2.141328] (pallet_detection) StdoutLine: {'line': b'writing dependency_links to ../../build/pallet_detection/pallet_detection.egg-info/dependency_links.txt\n'}
+[2.141855] (pallet_detection) StdoutLine: {'line': b'writing entry points to ../../build/pallet_detection/pallet_detection.egg-info/entry_points.txt\n'}
+[2.142190] (pallet_detection) StdoutLine: {'line': b'writing requirements to ../../build/pallet_detection/pallet_detection.egg-info/requires.txt\n'}
+[2.142444] (pallet_detection) StdoutLine: {'line': b'writing top-level names to ../../build/pallet_detection/pallet_detection.egg-info/top_level.txt\n'}
+[2.203353] (pallet_detection) StdoutLine: {'line': b"reading manifest file '../../build/pallet_detection/pallet_detection.egg-info/SOURCES.txt'\n"}
+[2.211548] (-) TimerEvent: {}
+[2.312102] (-) TimerEvent: {}
+[2.413555] (-) TimerEvent: {}
+[2.514804] (-) TimerEvent: {}
+[2.615995] (-) TimerEvent: {}
+[2.717055] (-) TimerEvent: {}
+[2.817902] (-) TimerEvent: {}
+[2.919172] (-) TimerEvent: {}
+[3.020335] (-) TimerEvent: {}
+[3.121336] (-) TimerEvent: {}
+[3.222340] (-) TimerEvent: {}
+[3.323255] (-) TimerEvent: {}
+[3.424145] (-) TimerEvent: {}
+[3.524971] (-) TimerEvent: {}
+[3.625807] (-) TimerEvent: {}
+[3.726661] (-) TimerEvent: {}
+[3.827577] (-) TimerEvent: {}
+[3.928478] (-) TimerEvent: {}
+[4.029475] (-) TimerEvent: {}
+[4.130422] (-) TimerEvent: {}
+[4.231321] (-) TimerEvent: {}
+[4.332193] (-) TimerEvent: {}
+[4.433210] (-) TimerEvent: {}
+[4.534387] (-) TimerEvent: {}
+[4.538142] (pallet_detection) StdoutLine: {'line': b"writing manifest file '../../build/pallet_detection/pallet_detection.egg-info/SOURCES.txt'\n"}
+[4.539150] (pallet_detection) StdoutLine: {'line': b'running build\n'}
+[4.539441] (pallet_detection) StdoutLine: {'line': b'running build_py\n'}
+[4.540614] (pallet_detection) StdoutLine: {'line': b'copying pallet_detection/image_rectifier.py -> /home/ws/build/pallet_detection/build/lib/pallet_detection\n'}
+[4.541163] (pallet_detection) StdoutLine: {'line': b'copying pallet_detection/process_camera_feed.py -> /home/ws/build/pallet_detection/build/lib/pallet_detection\n'}
+[4.541490] (pallet_detection) StdoutLine: {'line': b'copying pallet_detection/__init__.py -> /home/ws/build/pallet_detection/build/lib/pallet_detection\n'}
+[4.541809] (pallet_detection) StdoutLine: {'line': b'copying pallet_detection/wait_for_model.py -> /home/ws/build/pallet_detection/build/lib/pallet_detection\n'}
+[4.542160] (pallet_detection) StdoutLine: {'line': b'copying pallet_detection/publish_camera_feed.py -> /home/ws/build/pallet_detection/build/lib/pallet_detection\n'}
+[4.542964] (pallet_detection) StderrLine: {'line': b'warning: build_py: byte-compiling is disabled, skipping.\n'}
+[4.543168] (pallet_detection) StderrLine: {'line': b'\n'}
+[4.543308] (pallet_detection) StdoutLine: {'line': b'running install\n'}
+[4.552689] (pallet_detection) StdoutLine: {'line': b'running install_lib\n'}
+[4.584838] (pallet_detection) StdoutLine: {'line': b'copying /home/ws/build/pallet_detection/build/lib/pallet_detection/process_camera_feed.py -> /home/ws/install/pallet_detection/lib/python3.10/site-packages/pallet_detection\n'}
+[4.634526] (-) TimerEvent: {}
+[4.663140] (pallet_detection) StderrLine: {'line': b'warning: install_lib: byte-compiling is disabled, skipping.\n'}
+[4.663896] (pallet_detection) StderrLine: {'line': b'\n'}
+[4.664096] (pallet_detection) StdoutLine: {'line': b'running install_data\n'}
+[4.664390] (pallet_detection) StdoutLine: {'line': b'copying resource/pallet_detection -> /home/ws/install/pallet_detection/share/ament_index/resource_index/packages\n'}
+[4.664576] (pallet_detection) StdoutLine: {'line': b'copying package.xml -> /home/ws/install/pallet_detection/share/pallet_detection\n'}
+[4.664842] (pallet_detection) StdoutLine: {'line': b'running install_egg_info\n'}
+[4.700212] (pallet_detection) StdoutLine: {'line': b"removing '/home/ws/install/pallet_detection/lib/python3.10/site-packages/pallet_detection-0.0.0-py3.10.egg-info' (and everything under it)\n"}
+[4.700835] (pallet_detection) StdoutLine: {'line': b'Copying ../../build/pallet_detection/pallet_detection.egg-info to /home/ws/install/pallet_detection/lib/python3.10/site-packages/pallet_detection-0.0.0-py3.10.egg-info\n'}
+[4.702626] (pallet_detection) StdoutLine: {'line': b'running install_scripts\n'}
+[4.734627] (-) TimerEvent: {}
+[4.835175] (-) TimerEvent: {}
+[4.935748] (-) TimerEvent: {}
+[4.971118] (pallet_detection) StdoutLine: {'line': b'Installing image_publisher script to /home/ws/install/pallet_detection/lib/pallet_detection\n'}
+[4.971636] (pallet_detection) StdoutLine: {'line': b'Installing image_subscriber script to /home/ws/install/pallet_detection/lib/pallet_detection\n'}
+[4.971985] (pallet_detection) StdoutLine: {'line': b'Installing model_ready_waiter script to /home/ws/install/pallet_detection/lib/pallet_detection\n'}
+[4.972859] (pallet_detection) StdoutLine: {'line': b"writing list of installed files to '/home/ws/build/pallet_detection/install.log'\n"}
+[5.035930] (-) TimerEvent: {}
+[5.050746] (pallet_detection) CommandEnded: {'returncode': 0}
+[5.106594] (pallet_detection) JobEnded: {'identifier': 'pallet_detection', 'rc': 0}
+[5.111006] (-) EventReactorShutdown: {}

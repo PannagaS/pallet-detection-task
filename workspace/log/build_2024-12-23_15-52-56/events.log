@@ -1,0 +1,4 @@
+[0.000000] (-) TimerEvent: {}
+[0.000818] (-) JobUnselected: {'identifier': 'pallet_detection'}
+[0.000920] (-) JobUnselected: {'identifier': 'test_pkg'}
+[0.001333] (-) EventReactorShutdown: {}

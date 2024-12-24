@@ -1,0 +1,14 @@
+# subscriber node name for processing ros bag contents
+image_subscriber:
+  ros__parameters:
+    model_path: "/home/ws/models/best.engine"
+    save_dir: "/home/ws/predictions"
+    mask_save_dir: "/home/ws/predictions/segmentation_masks"
+    confidence: 0.35
+    iou: 0.7
+    half: "False"
+    topic_to_subscribe: "/input_images" #'/robot1/zed2i/left/image_rect_color' # # '
+    save_predictions: "False"
+image_publisher:
+  ros__parameters:
+    test_images: "/home/ws/Pallet-Detection-1/test/images"

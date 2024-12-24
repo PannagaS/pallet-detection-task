@@ -1,0 +1,28 @@
+running egg_info
+writing ../../build/pallet_detection/pallet_detection.egg-info/PKG-INFO
+writing dependency_links to ../../build/pallet_detection/pallet_detection.egg-info/dependency_links.txt
+writing entry points to ../../build/pallet_detection/pallet_detection.egg-info/entry_points.txt
+writing requirements to ../../build/pallet_detection/pallet_detection.egg-info/requires.txt
+writing top-level names to ../../build/pallet_detection/pallet_detection.egg-info/top_level.txt
+reading manifest file '../../build/pallet_detection/pallet_detection.egg-info/SOURCES.txt'
+writing manifest file '../../build/pallet_detection/pallet_detection.egg-info/SOURCES.txt'
+running build
+running build_py
+copying pallet_detection/process_camera_feed.py -> /home/ws/build/pallet_detection/build/lib/pallet_detection
+copying pallet_detection/__init__.py -> /home/ws/build/pallet_detection/build/lib/pallet_detection
+copying pallet_detection/wait_for_model.py -> /home/ws/build/pallet_detection/build/lib/pallet_detection
+copying pallet_detection/publish_camera_feed.py -> /home/ws/build/pallet_detection/build/lib/pallet_detection
+running install
+running install_lib
+copying /home/ws/build/pallet_detection/build/lib/pallet_detection/process_camera_feed.py -> /home/ws/install/pallet_detection/lib/python3.10/site-packages/pallet_detection
+running install_data
+copying resource/pallet_detection -> /home/ws/install/pallet_detection/share/ament_index/resource_index/packages
+copying package.xml -> /home/ws/install/pallet_detection/share/pallet_detection
+running install_egg_info
+removing '/home/ws/install/pallet_detection/lib/python3.10/site-packages/pallet_detection-0.0.0-py3.10.egg-info' (and everything under it)
+Copying ../../build/pallet_detection/pallet_detection.egg-info to /home/ws/install/pallet_detection/lib/python3.10/site-packages/pallet_detection-0.0.0-py3.10.egg-info
+running install_scripts
+Installing image_publisher script to /home/ws/install/pallet_detection/lib/pallet_detection
+Installing image_subscriber script to /home/ws/install/pallet_detection/lib/pallet_detection
+Installing model_ready_waiter script to /home/ws/install/pallet_detection/lib/pallet_detection
+writing list of installed files to '/home/ws/build/pallet_detection/install.log'

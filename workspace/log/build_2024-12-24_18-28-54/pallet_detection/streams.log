@@ -1,0 +1,35 @@
+[2.015s] Invoking command in '/home/ws/src/pallet_detection': PYTHONPATH=/home/ws/build/pallet_detection/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/ws/install/pallet_detection/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/pallet_detection build --build-base /home/ws/build/pallet_detection/build install --record /home/ws/build/pallet_detection/install.log --single-version-externally-managed install_data
+[2.507s] running egg_info
+[2.537s] writing ../../build/pallet_detection/pallet_detection.egg-info/PKG-INFO
+[2.538s] writing dependency_links to ../../build/pallet_detection/pallet_detection.egg-info/dependency_links.txt
+[2.538s] writing entry points to ../../build/pallet_detection/pallet_detection.egg-info/entry_points.txt
+[2.539s] writing requirements to ../../build/pallet_detection/pallet_detection.egg-info/requires.txt
+[2.539s] writing top-level names to ../../build/pallet_detection/pallet_detection.egg-info/top_level.txt
+[2.601s] reading manifest file '../../build/pallet_detection/pallet_detection.egg-info/SOURCES.txt'
+[2.604s] writing manifest file '../../build/pallet_detection/pallet_detection.egg-info/SOURCES.txt'
+[2.604s] running build
+[2.604s] running build_py
+[2.605s] copying pallet_detection/image_rectifier.py -> /home/ws/build/pallet_detection/build/lib/pallet_detection
+[2.605s] copying pallet_detection/process_camera_feed.py -> /home/ws/build/pallet_detection/build/lib/pallet_detection
+[2.605s] copying pallet_detection/__init__.py -> /home/ws/build/pallet_detection/build/lib/pallet_detection
+[2.606s] copying pallet_detection/wait_for_model.py -> /home/ws/build/pallet_detection/build/lib/pallet_detection
+[2.606s] copying pallet_detection/publish_camera_feed.py -> /home/ws/build/pallet_detection/build/lib/pallet_detection
+[2.607s] warning: build_py: byte-compiling is disabled, skipping.
+[2.607s] 
+[2.607s] running install
+[2.616s] running install_lib
+[2.648s] copying /home/ws/build/pallet_detection/build/lib/pallet_detection/process_camera_feed.py -> /home/ws/install/pallet_detection/lib/python3.10/site-packages/pallet_detection
+[2.648s] warning: install_lib: byte-compiling is disabled, skipping.
+[2.648s] 
+[2.648s] running install_data
+[2.648s] copying resource/pallet_detection -> /home/ws/install/pallet_detection/share/ament_index/resource_index/packages
+[2.649s] copying package.xml -> /home/ws/install/pallet_detection/share/pallet_detection
+[2.649s] running install_egg_info
+[2.682s] removing '/home/ws/install/pallet_detection/lib/python3.10/site-packages/pallet_detection-0.0.0-py3.10.egg-info' (and everything under it)
+[2.682s] Copying ../../build/pallet_detection/pallet_detection.egg-info to /home/ws/install/pallet_detection/lib/python3.10/site-packages/pallet_detection-0.0.0-py3.10.egg-info
+[2.684s] running install_scripts
+[2.955s] Installing image_publisher script to /home/ws/install/pallet_detection/lib/pallet_detection
+[2.955s] Installing image_subscriber script to /home/ws/install/pallet_detection/lib/pallet_detection
+[2.956s] Installing model_ready_waiter script to /home/ws/install/pallet_detection/lib/pallet_detection
+[2.957s] writing list of installed files to '/home/ws/build/pallet_detection/install.log'
+[3.030s] Invoked command in '/home/ws/src/pallet_detection' returned '0': PYTHONPATH=/home/ws/build/pallet_detection/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/ws/install/pallet_detection/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/pallet_detection build --build-base /home/ws/build/pallet_detection/build install --record /home/ws/build/pallet_detection/install.log --single-version-externally-managed install_data

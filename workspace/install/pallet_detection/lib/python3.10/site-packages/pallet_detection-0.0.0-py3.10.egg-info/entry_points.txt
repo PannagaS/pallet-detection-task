@@ -1,0 +1,4 @@
+[console_scripts]
+image_publisher = pallet_detection.publish_camera_feed:main
+image_subscriber = pallet_detection.process_camera_feed:main
+model_ready_waiter = pallet_detection.wait_for_model:main

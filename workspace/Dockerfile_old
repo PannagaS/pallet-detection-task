@@ -1,0 +1,40 @@
+#
+# Dockerfile for building ROS2 from source
+#
+#FROM nvcr.io/nvidia/l4t-tensorrt:r8.6.2-devel
+#FROM nvcr.io/nvidia/l4t-jetpack:r36.3.0
+FROM ultralytics/ultralytics:latest-jetson-jetpack6
+
+# Set environment variables for non-interactive installation
+ENV DEBIAN_FRONTEND=noninteractive
+
+# Update and install necessary packages
+RUN apt-get update && \
+    apt-get install -y \
+    locales \
+    curl \
+    gnupg2 \
+    lsb-release \
+    software-properties-common && \
+    locale-gen en_US en_US.UTF-8 && \
+    update-locale LC_ALL=en_US.UTF-8 LANG=en_US.UTF-8 && \
+    export LANG=en_US.UTF-8
+
+# Add the ROS 2 GPG key
+RUN curl -sSL https://raw.githubusercontent.com/ros/rosdistro/master/ros.key -o /usr/share/keyrings/ros-archive-keyring.gpg
+
+# Add the ROS 2 repository to the sources list
+RUN echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/ros-archive-keyring.gpg] http://packages.ros.org/ros2/ubuntu $(lsb_release -cs) main" | tee /etc/apt/sources.list.d/ros2.list > /dev/null
+
+# Update package index and install ROS 2 Humble Desktop
+RUN apt-get update && \
+    apt-get install -y ros-humble-desktop
+
+RUN apt install python3-colcon-common-extensions -y
+
+RUN apt-get install python3-rosdep -y && \
+	rosdep init && \
+	rosdep update
+
+# Set the entrypoint to bash
+ENTRYPOINT ["/bin/bash"]
