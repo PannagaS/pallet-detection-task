@@ -41,19 +41,19 @@ full dataset includes 1245 images
 The process flow inside the docker is as shown in the figure below. 
 ![assets](https://github.com/PannagaS/pallet-detection-task/blob/main/assets/process_flow.png) 
 
-- The entry point for the project is at start.sh shell script.
-- The user is prompted with options for converting best.pt to best.engine (TensorRT model).
+- The entry point for the project is at run.sh shell script.
+- Once the docker image is up and running, the user is prompted with options for converting best.pt to best.engine (TensorRT model).
 - Further, depending on whether the user wants to run the inference on test images or from the ros bag ([click here](https://drive.google.com/file/d/1BvhP653G3PqfUq96L18gDBIi-5oOYqcr/view) for bag file) or on live camera feed, other model parameters such as confidence, iou, half precision flag (FP16) can be set accordingly. 
 
 Note that you will be prompted for however you want would like to run the model (by specifying model parameters and/or running inference on specific topics). I believe these prompts are self-explanatory. 
 
-## Navigating the project
+## How to run this project ?
 This project is wrapped in a docker for easy replication on other devices with NVIDIA drivers. 
 Please pull the docker image from [here](https://hub.docker.com/repository/docker/pans06/peer_robotics/general). 
 ```
-docker pull pans06/peer_robotics:jetson_v2
+docker pull pans06/peer_robotics:jetson_v5
 ```
-
+Clone this repo, and navigate to `workspace`.
 Download the bag file and place it under `workspace` directory. 
 
 Before running the docker container, make your folder structure should look something like the following: 
@@ -91,20 +91,27 @@ workspace
 ```
 Note that you can also choose to place the dataset folder `Pallet-Detection-1` inside workspace, but since we are not training, you can skip this step. 
 
----
-Create a new interactive container from the image you just pulled by running the following command: 
-```
-docker run -it --rm --runtime=nvidia -v <path to workspace>:/home/ws --ipc=host peer_robotics:jetson_v2
-```
-Note that this will open an interactive shell with ROS2 humble and Ultralytics installed for performing the above mentioned tasks. 
+Then perform the following steps
+- run `chmod +x run.sh`
+- run `./run.sh` 
 
-The container will automatically run the `start.sh` script that will further prompt the user to input optional arguments to perform each of these individual tasks. 
+
+The above shell script runs a user friendly docker container that I believe is self-explanatory. If you want to visualize the detections in `rviz` please enter *yes*, otherwise enter *no*. 
+
+---
+Note that the docker image comes with ROS2 humble and Ultralytics installed for performing the above mentioned tasks. 
+
+The container will automatically run the `start.sh` or `start_with_rviz.sh` script depending on visualization requirements, and it will further prompt the user to input optional arguments to perform each of these individual tasks. 
 
 If you choose to save the predictions locally, the shell script will create a directory (`predictions`) & subdirectories (`class_0` and `class_1`) inside `workspace` and saves the output images that are published to the 5 topics (`/all_detections`, `/ground_detections`, `/pallet_detections`, `/ground_segmentmask`, `/pallet_segmentmask`)
 
+
 ## Results I obtained can be viewed here : [link for the detection results I got](https://drive.google.com/drive/folders/1fs4lLZgcdoZoiF7aGXPC6BKuSoB8UfwN?usp=sharing)
+
 ### Visuals
 ![assets\my_results-gif.gif](https://github.com/PannagaS/pallet-detection-task/blob/main/assets/my_results-gif.gif)
+
+put rviz visuals
 
 ### Object detection and segmentation model performance metrics
 The following charts show the model's performance after training for 100 epochs on training dataset & was validated against the validation dataset. 
