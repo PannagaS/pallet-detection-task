@@ -48,6 +48,7 @@ The process flow inside the docker is as shown in the figure below.
 Note that you will be prompted for however you want would like to run the model (by specifying model parameters and/or running inference on specific topics). I believe these prompts are self-explanatory. 
 
 ## How to run this project ?
+Note that this project was developed using Jetson Orin Nano Super. Everything is configured to match arm64 architecture. 
 This project is wrapped in a docker for easy replication on other devices with NVIDIA drivers. 
 Please pull the docker image from [here](https://hub.docker.com/repository/docker/pans06/peer_robotics/general). 
 ```
