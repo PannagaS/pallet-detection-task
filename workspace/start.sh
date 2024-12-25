@@ -100,9 +100,6 @@ fi
 cd /home/ws/
 source /opt/ros/humble/setup.bash
 
-# For visualization 
-# rviz2 --display-config /home/ws/rviz_view_config_file.rviz &
-
 source install/setup.bash
 
 
