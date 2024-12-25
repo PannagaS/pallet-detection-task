@@ -61,21 +61,22 @@ Before running the docker container, make your folder structure should look some
 
 ```
 workspace
-├── build
+├── build/
 ├── Dockerfile
+├── fastdds.xml
 ├── get_tensor_rt_model.sh
-├── install
 ├── internship_assignment_sample_bag
 │   ├── internship_assignment_sample_bag_0.db3
 │   └── metadata.yaml
+├── install
 ├── log
-├── main.py
 ├── model_config.yaml
 ├── models
-│   ├── best.cache
-│   ├── best.engine
-│   ├── best.onnx
-│   └── best.pt
+│   ├── best.cache
+│   ├── best.engine
+│   ├── best.onnx
+│   ├── best.pt
+│   └── best_v1.pt
 ├── Pallet-Detection-1
 │   ├── data.yaml
 │   ├── README.dataset.txt
@@ -83,11 +84,33 @@ workspace
 │   ├── test/
 │   ├── train/
 │   └── valid/
+├── run.sh
+├── rviz_view_config_file.rviz
 ├── scripts
-│   └── generate_engine_model.py
+│   └── generate_engine_model.py
 ├── src
-│   └── pallet_detection/
+│   └── pallet_detection
+│       ├── package.xml
+│       ├── pallet_detection
+│       │   ├── build
+│       │   │   └── COLCON_IGNORE
+│       │   ├── __init__.py
+│       │   ├── install/
+│       │   ├── launch
+│       │   │   ├── pallet_detection_launch.py
+│       │   │   └── pallet_detection_launch_realtime.py
+│       │   ├── log/
+│       │   ├── param_config.yaml
+│       │   ├── process_camera_feed.py
+│       │   ├── publish_camera_feed.py
+│       │   └── wait_for_model.py
+│       ├── resource
+│       │   └── pallet_detection
+│       ├── setup.cfg
+│       ├── setup.py
+│       └── test/
 ├── start.sh
+├── start_with_rviz.sh
 └── yolo11s-seg.pt
 ```
 Note that you can also choose to place the dataset folder `Pallet-Detection-1` inside workspace, but since we are not training, you can skip this step. 
