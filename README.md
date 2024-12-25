@@ -105,6 +105,12 @@ The container will automatically run the `start.sh` or `start_with_rviz.sh` scri
 
 If you choose to save the predictions locally, the shell script will create a directory (`predictions`) & subdirectories (`class_0` and `class_1`) inside `workspace` and saves the output images that are published to the 5 topics (`/all_detections`, `/ground_detections`, `/pallet_detections`, `/ground_segmentmask`, `/pallet_segmentmask`)
 
+---
+In case you want an interactive shell inside the docker container run the following command: 
+```
+docker run -it --rm --runtime nvidia --net=host -v  <path-to-workspace>:/home/ws peer_robotics:jetson_v5 /bin/bash
+```
+Once inside, run `chmod +x start.sh` and run `./start.sh` or `chmod +x start_with_rviz.sh` and run `./start_with_rviz.sh`. 
 
 ## Results I obtained can be viewed here : [link for the detection results I got](https://drive.google.com/drive/folders/1fs4lLZgcdoZoiF7aGXPC6BKuSoB8UfwN?usp=sharing)
 
