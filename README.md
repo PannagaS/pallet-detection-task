@@ -118,9 +118,9 @@ The following charts show the model's performance after training for 100 epochs 
 
 ## Additional Notes
  
-As a side, it takes ~6-7 seconds for the image_processor node to load the best.engine model. To make sure the incoming images are not processed before the model is loaded I am delaying the execution of image_publisher node or playing the given ros bag. For this reason I am publishing a flag (True/False) if best.engine has been loaded yet. Depending on this flag, I then utilize model_ready_waiter node to subscribe to the topic and if the flag reads True, only then I am executing the remainder of the process in launch file. 
+As a side, it takes ~6-7 seconds for the `image_processor` node to load the **best.engine** model. To make sure the incoming images are not processed before the model is loaded, I am delaying the execution of image_publisher node or playing the given ros bag. For this reason the `image_processor` node is also publishing a flag (True/False) to `model_ready` topic to check if best.engine has been loaded yet. Depending on the flag, I then utilize `model_ready_waiter` node to subscribe to the `model_ready` topic and see if the flag reads True. If it reads True, only then I am executing the remainder of the process in launch file. 
 
-However, the above process is **redundant and unnecessary** when you are feeding live data. The start.sh script takes care of running the appropriate launch file depending on the arguments you pass. 
+**However**, the above process is **redundant and unnecessary** when you are feeding live data. The start.sh script takes care of running the appropriate launch file depending on the arguments you pass. 
  
 
 ## Contributor
