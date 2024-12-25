@@ -111,6 +111,7 @@ If you choose to save the predictions locally, the shell script will create a di
 ### Visuals
 ![assets\my_results-gif.gif](https://github.com/PannagaS/pallet-detection-task/blob/main/assets/my_results-gif.gif)
 
+### RViz visuals
 ![assets\rviz-screen-recording-gif.gif](https://github.com/PannagaS/pallet-detection-task/blob/main/assets/rviz-screen-recording-gif.gif)
 ### Object detection and segmentation model performance metrics
 The following charts show the model's performance after training for 100 epochs on training dataset & was validated against the validation dataset. 
