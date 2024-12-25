@@ -1,13 +1,18 @@
 #!/bin/bash
-
+source /opt/ros/humble/setup.bash
 # Create best.engine model from best.pt
 echo "=========================================================================="
 echo "                  Peer Robotics Pallet Detection Task"
 echo "=========================================================================="
 echo "Building a TensorRT model from best.pt"
 echo "This could take a few minutes ..."
-# ./get_tensor_rt_model.sh
 
+./get_tensor_rt_model.sh
+
+echo "Configuring DDS ..."
+ 
+export FASTRTPS_DEFAULT_PROFILES_FILE=/home/ws/fastdds.xml
+echo $FASTRTPS_DEFAULT_PROFILES_FILE
 # Define the YAML file path
 YAML_FILE="/home/ws/src/pallet_detection/pallet_detection/param_config.yaml"
 
@@ -94,8 +99,11 @@ fi
 # Source ROS 2 setup
 cd /home/ws/
 source /opt/ros/humble/setup.bash
-source install/setup.bash
 
+# For visualization 
+# rviz2 --display-config /home/ws/rviz_view_config_file.rviz &
+
+source install/setup.bash
 
 
 # Change directory to launch file scripts

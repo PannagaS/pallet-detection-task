@@ -1,7 +1,8 @@
 #!/bin/bash
-
+source /opt/ros/humble/setup.bash
 # Path to the YAML configuration file
 CONFIG_FILE="/home/ws/model_config.yaml"
+
 
 echo "=======================CREATING TENSOR RT FILE============================"
 # Prompt the user for the set_half flag

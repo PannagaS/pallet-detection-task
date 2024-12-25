@@ -4,7 +4,7 @@ image_subscriber:
     model_path: "/home/ws/models/best.engine"
     save_dir: "/home/ws/predictions"
     mask_save_dir: "/home/ws/predictions/segmentation_masks"
-    confidence: 0.35
+    confidence: 0.8
     iou: 0.7
     half: "False"
     topic_to_subscribe: "/input_images" #'/robot1/zed2i/left/image_rect_color' # # '

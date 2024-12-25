@@ -1,4 +1,4 @@
 python_script: "/home/ws/scripts/generate_engine_model.py"
 models_dir: "/home/ws/models/"
-set_half: "False"
-set_int8: "False"
+set_half: "True"
+set_int8: "True"

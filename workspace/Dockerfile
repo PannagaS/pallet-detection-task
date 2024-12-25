@@ -44,7 +44,7 @@ RUN apt-get install -y python3-rosdep && \
 
 # Downgrade setuptools (setuptools version 70.0.0 gave me no errors during colcon build)
 RUN pip install setuptools==70.0.0
-
+RUN pip install numpy==1.23.5
 
 
 # # (Optional) Source ROS automatically
@@ -56,7 +56,7 @@ RUN pip install setuptools==70.0.0
 
 WORKDIR /home/ws
 
-RUN get https://github.com/mikefarah/yq/releases/latest/download/yq_linux_arm64 -O /usr/local/bin/yq
+RUN wget https://github.com/mikefarah/yq/releases/latest/download/yq_linux_arm64 -O /usr/local/bin/yq
 RUN chmod +x /usr/local/bin/yq
 
 
@@ -67,8 +67,10 @@ RUN chmod +x /home/ws/get_tensor_rt_model.sh
 COPY start.sh /home/ws/start.sh
 RUN chmod +x /home/ws/start.sh 
 
- 
+COPY start_with_rviz.sh /home/ws/start_with_rviz.sh
+RUN chmod +x /home/ws/start_with_rviz.sh 
+
  
 # Default command to source ROS and run the shell script
 # CMD ["/bin/bash", "-c", "source /opt/ros/humble/setup.bash && ./get_tensor_rt_model.sh"]\
-ENTRYPOINT ["/bin/bash"]
+ENTRYPOINT ["/bin/bash", "-c"] 
