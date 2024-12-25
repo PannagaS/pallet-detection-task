@@ -102,7 +102,7 @@ The container will automatically run the `start.sh` script that will further pro
 
 If you choose to save the predictions locally, the shell script will create a directory (`predictions`) & subdirectories (`class_0` and `class_1`) inside `workspace` and saves the output images that are published to the 5 topics (`/all_detections`, `/ground_detections`, `/pallet_detections`, `/ground_segmentmask`, `/pallet_segmentmask`)
 
-#### Results I obtained can be viewed here : [link for the detection results I got](https://drive.google.com/drive/folders/1fs4lLZgcdoZoiF7aGXPC6BKuSoB8UfwN?usp=sharing)
+## Results I obtained can be viewed here : [link for the detection results I got](https://drive.google.com/drive/folders/1fs4lLZgcdoZoiF7aGXPC6BKuSoB8UfwN?usp=sharing)
 ### Visuals
 ![assets\my_results-gif.gif](https://github.com/PannagaS/pallet-detection-task/blob/main/assets/my_results-gif.gif)
 
@@ -116,3 +116,12 @@ The following charts show the model's performance after training for 100 epochs 
  ![assets\confusion_matrix_normalized.png#center](https://github.com/PannagaS/pallet-detection-task/blob/main/assets/confusion_matrix_normalized.png)
  
 
+## Additional Notes
+ 
+As a side, it takes ~6-7 seconds for the image_processor node to load the best.engine model. To make sure the incoming images are not processed before the model is loaded I am delaying the execution of image_publisher node or playing the given ros bag. For this reason I am publishing a flag (True/False) if best.engine has been loaded yet. Depending on this flag, I then utilize model_ready_waiter node to subscribe to the topic and if the flag reads True, only then I am executing the remainder of the process in launch file. 
+
+However, the above process is **redundant and unnecessary** when you are feeding live data. The start.sh script takes care of running the appropriate launch file depending on the arguments you pass. 
+ 
+
+## Contributor
+Pannaga Sudarshan (pannaga@umich.edu)
