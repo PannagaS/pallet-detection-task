@@ -1,4 +1,4 @@
-# Peer Robotics Pallet Detection Task
+# Pallet Detection Task
 ## Task description 
 ### Task 1
 * Given a dataset of pallets, annotate **pallets** and **ground** using any annotation tools. 
